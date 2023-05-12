@@ -28,9 +28,9 @@ async function main() {
 
   const ForbiddenTlds = await hre.ethers.getContractFactory('ForbiddenTldsV2');
 
-  const metadataAddress = '0xa338D6CD0850b4283Caf3E6aE4904a32A378c4f9';
+  const metadataAddress = '0xf7227a4251cB576eA97411921431415a3D4e7Fa8';
 
-  const royaltyAddress = '0xc0C962DEC521883ca85F2e5F963954C3bc9b0359';
+  const royaltyAddress = '0x60b43d4Ef85804223a92774Ee9dAE1362Ab0c288';
 
   const lexarHub = await LexarDomainHub.deploy(metadataAddress);
   await lexarHub.deployed();
@@ -43,10 +43,10 @@ async function main() {
   const resolverAddress = lexarResolver.address;
   const domainSbtResolverAddress = domainSbtResolver.address;
   console.log('resolver Address:', resolverAddress);
-  console.log('domain Sbt resolver address:', domainSbtResolverAddress);
+  console.log('Domain Sbt resolver address:', domainSbtResolverAddress);
 
-  await lexarResolver.addHubAddress(hubAddress, { gasLimit: 1000000 });
-  await domainSbtResolver.addHubAddress(hubAddress, { gasLimit: 1000000 });
+  await lexarResolver.addHubAddress(hubAddress, { gasLimit: 30000000 });
+  await domainSbtResolver.addHubAddress(hubAddress, { gasLimit: 30000000 });
 
   const forbiddenTlds = await ForbiddenTlds.deploy(hubAddress);
   await forbiddenTlds.deployed();
@@ -97,8 +97,8 @@ async function main() {
   const sbtInit = await lexarHub.initSBT(lexarSBTFactory.address);
   await sbtInit.wait();
 
-  const sbtToogle = await lexarSBTFactory.toggleBuyingTlds();
-  await sbtToogle.wait();
+  const sbtToggle = await lexarSBTFactory.toggleBuyingTlds();
+  await sbtToggle.wait();
 
   
 }

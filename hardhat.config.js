@@ -26,12 +26,13 @@ module.exports = {
       // See its defaults
     },
     chiado: {
-      url: 'https://rpc.chiado.gnosis.gateway.fm',
+      url: 'https://rpc.chiadochain.net',
       accounts: [privateKey],
       chainId: 10200,
-      gasPrice: 50000000000, // Optional, for legacy transactions
-      maxPriorityFeePerGas: 2000000000, // 2 Gwei
-      maxFeePerGas: 10000000000, // 10 Gwei
+      gas: 10000000, // Set the gas limit for transactions
+      gasPrice: 5000000000, // Optional, for legacy transactions
+      maxPriorityFeePerGas: 200000000, // 2 Gwei
+      maxFeePerGas: 1000000000, // 10 Gwei
     },
   },
   solidity: {
