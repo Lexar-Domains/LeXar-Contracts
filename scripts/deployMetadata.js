@@ -14,13 +14,13 @@ const main = async () => {
   console.log('Lexar Metadata Contract deployed to:', lexarMetadata.address);
 };
 
-// Lexar Metadata Contract deployed to: 0xf7227a4251cB576eA97411921431415a3D4e7Fa8
-// resolver Address: 0xdcDF99A8FeC1102AdeA84c4087224Ef2d6BF8B27
-// Domain Sbt resolver address: 0x86e284Ef6002A6f79fc6715303743d48cDB5cf73
-// lexarDomainHub deployed to:  0xbBda4a2Ccfe6d31422BCc740aea0c304C5c3613C
-// lexarDomainFactory deployed to:  0x6B43B05dA3A20AB9dEAf5d3E97C626dc0673F570
-// forbiddenTlds deployed to:  0xa41479c683B534712b4a1686e545160E7710f4be
-// lexarDomainSBTFactory deployed to:  0x1B8b78c884Caa7D7523FE8669768Bfe07b40f770
+// Lexar Metadata Contract deployed to: 0xA080918252C8826522aA95AddcA1A51eaA15E0d1
+// resolver Address: 0xDBE4745aaBaa930f15Da5F9337A23aE2Ba287b0C
+// Domain Sbt resolver address: 0x9f0b2f5CD4e517Ff130A0DA0d25C94Aa00297c1f
+// lexarDomainHub deployed to:  0xAB733984E1Bd4e55D804ae40e299f37BbaC19d3f
+// lexarDomainFactory deployed to:  0x21B53D918825013B8B6AF56d6bCc2D6235Af8a7B
+// forbiddenTlds deployed to:  0xDAD93dFA9e2B3D83815Ec61e638d9cc348DAD927
+// lexarDomainSBTFactory deployed to:  0x54293d644AbEf25A74e1820Dc06B6c5d35aDcB0D
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.

@@ -19,7 +19,7 @@ contract LexarDomainFactoryV2 is ILexarDomainFactory, ReentrancyGuard, Context{
   mapping (string => address) public override tldNamesAddresses; // a mapping of TLDs (string => TLDaddress)
 
   address public forbiddenTlds; // address of the contract that stores the list of forbidden TLDs
-  address public metadataAddress; // default FlexiPunkMetadata address
+  address public metadataAddress; // default address
   
   uint256 public price; // price for creating a new TLD
   uint256 public royalty = 0; // royalty for creating a new TLD in percentage

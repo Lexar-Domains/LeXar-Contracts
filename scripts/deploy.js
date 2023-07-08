@@ -28,7 +28,7 @@ async function main() {
 
   const ForbiddenTlds = await hre.ethers.getContractFactory('ForbiddenTldsV2');
 
-  const metadataAddress = '0xf7227a4251cB576eA97411921431415a3D4e7Fa8';
+  const metadataAddress = '0xA080918252C8826522aA95AddcA1A51eaA15E0d1';
 
   const royaltyAddress = '0x60b43d4Ef85804223a92774Ee9dAE1362Ab0c288';
 
@@ -45,8 +45,8 @@ async function main() {
   console.log('resolver Address:', resolverAddress);
   console.log('Domain Sbt resolver address:', domainSbtResolverAddress);
 
-  await lexarResolver.addHubAddress(hubAddress, { gasLimit: 30000000 });
-  await domainSbtResolver.addHubAddress(hubAddress, { gasLimit: 30000000 });
+  await lexarResolver.addHubAddress(hubAddress, { gasLimit: 3000000 });
+  await domainSbtResolver.addHubAddress(hubAddress, { gasLimit: 3000000 });
 
   const forbiddenTlds = await ForbiddenTlds.deploy(hubAddress);
   await forbiddenTlds.deployed();

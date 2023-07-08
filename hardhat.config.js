@@ -6,7 +6,7 @@ require('@openzeppelin/hardhat-upgrades');
 
 const dotenv = require('dotenv').config();
 const privateKey =
-  '925c4698cb8308b800db1c3d476c20ffcf8cf65dd2113a668cec48fcbd00f0ec';
+  'bbe6eea348414a135b3f76b98808b23de7810de85c1a47a18d6bc8084a81a78e';
 
 task('accounts', 'Prints The List Of Accounts', async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
@@ -25,10 +25,10 @@ module.exports = {
     hardhat: {
       // See its defaults
     },
-    chiado: {
-      url: 'https://rpc.chiadochain.net',
+    patexSepolia: {
+      url: 'https://test-rpc.patex.io',
       accounts: [privateKey],
-      chainId: 10200,
+      chainId: 471100,
       gas: 10000000, // Set the gas limit for transactions
       gasPrice: 5000000000, // Optional, for legacy transactions
       maxPriorityFeePerGas: 200000000, // 2 Gwei
